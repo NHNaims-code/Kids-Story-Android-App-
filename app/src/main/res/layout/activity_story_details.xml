@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StoryDetails"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <ImageView
+        android:id="@+id/storyThumbnail"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lion_and_mouse"
+        />
+
+    <TextView
+        android:id="@+id/storyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="The Lion and the Mouse"
+        app:layout_constraintEnd_toEndOf="@+id/storyThumbnail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/storyThumbnail"
+        app:layout_constraintTop_toBottomOf="@+id/storyThumbnail"
+        android:textColor="@color/text_color"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"/>
+
+    <TextView
+        android:id="@+id/storyDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/text_color"
+        android:textSize="16sp"
+        android:lineHeight="23sp"
+        android:text="This is a story that explains"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/storyTitle"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"/>
+
+    <TextView
+        android:id="@+id/moralOfTheStory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_color"
+        android:text="Moral Of the Story"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/storyDescription"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"/>
+
+    <TextView
+        android:id="@+id/storyMoral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        android:textColor="@color/text_color"
+        android:textAlignment="center"
+        android:text="A small act of kindness can go a long way."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moralOfTheStory"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"/>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:stepSize="1"
+            android:numStars="5"
+            android:progressTint="@color/color_accent"
+            app:layout_constraintTop_toBottomOf="@+id/storyMoral"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
